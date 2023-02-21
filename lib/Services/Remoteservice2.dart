@@ -1,17 +1,15 @@
-import 'dart:convert';
-import 'dart:developer';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
-import '../model_class/email_class.dart';
+import '../model_class/phone_class.dart';
 
-class EmailService {
-  Future<Emailverify> getUsers(String email) async {
+class PhoneService {
+  Future<PhoneVerify> getUsers(String phone) async {
     try {
       var url = Uri.parse(
-          'https://emailvalidation.abstractapi.com/v1/?api_key=f5cb8bc71c904298ab3c60c0e8ef464f&email=$email');
+          'https://phonevalidation.abstractapi.com/v1/?api_key=3b4f4adb3c464c2691d39cb918e913e2&phone=$phone');
       Response response = await http.get(url);
       if (response.statusCode == 200) {
-        var verify = emailverifyFromJson(response.body);
+        var verify = phoneVerifyFromJson(response.body);
         return verify;
       } else {
         throw Exception(response.reasonPhrase);
