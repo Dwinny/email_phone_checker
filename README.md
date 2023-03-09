@@ -15,4 +15,4 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
  
- This app is a personal project I ever built using API. It is an email and phone number verification app.
+ This app is a personal project. It is the first I ever built using an API. It is an email and phone number verification app.
